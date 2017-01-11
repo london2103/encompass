@@ -1,0 +1,61 @@
+[server]
+# username for running the daemon
+username = 
+# hostname. set it to a FQDN in order to be reached from outside
+host = localhost
+# ports
+electrum_rpc_port = 8000
+stratum_tcp_port = 50001
+#stratum_tcp_ssl_port = 50002
+#report_host = 
+#report_stratum_tcp_port = 50001
+#report_stratum_tcp_ssl_port = 50002
+banner = Welcome to Encompass!
+banner_file = /etc/encompass.banner
+#irc = no
+#irc_nick = <yournickname>
+#ssl_certfile = /path/to/electrum-server.crt
+#ssl_keyfile = /path/to/electrum-server.key
+logfile = /var/log/encompass-mercury.log
+donation_address = 
+# number of blocks to keep in memory (fixes bug in some chains where we can't retrieve orphaned txs from the node)
+block_cache_size = 20
+
+[leveldb]
+# path to your database
+path = 
+# for each address, history will be pruned if it is longer than this limit
+pruning_limit = 100
+
+[bitcoind]
+bitcoind_host = localhost
+bitcoind_port = 8332
+# user and password from bitcoin.conf
+bitcoind_user = 
+bitcoind_password = 
+
+[btc]
+coind_user = bitcoinrpc
+coind_password = bitcoinrpcpassword
+coind_host = localhost
+coind_port = 8332
+
+[mzc]
+coind_user = mazacoinrpc
+coind_password = mazacoinrpcpassword
+coind_host = localhost
+coind_port = 12832
+
+[clams]
+coind_user = clamrpc
+coind_password = clamrpcpassword
+coind_host = localhost
+coind_port = 30174
+
+[cloak]
+coind_user = user
+coind_password = pass
+coind_host = localhost
+coind_port = 12789
+
+
